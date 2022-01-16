@@ -1,7 +1,6 @@
 package ec1;
 
 import java.util.List;
-
 public class Problem1 {
 	/**
 	 * Given the list of Airports and their possible (one-way!) flights,

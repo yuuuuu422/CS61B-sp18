@@ -4,7 +4,7 @@ import org.junit.Test;
 public class DogTest {    
     @Test
     public void testSmall() {
-        Dog d = new Dog(3);
+        Dog d = new Dog(30);
         assertEquals("yip", d.noise());
     }
 

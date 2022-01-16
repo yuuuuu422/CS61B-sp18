@@ -17,8 +17,8 @@ public class DebugExercise3 {
         }
         return totalTurnips;
     }
-
     public static void main(String[] args) {
+
         In in = new In("foods.csv");
         System.out.println(countTurnips(in));
     }
