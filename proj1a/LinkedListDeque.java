@@ -47,12 +47,13 @@ public class LinkedListDeque<T> {
     }
 
     public T removeFirst() {
-        if (size == 0)
+        if (size == 0) {
             return null;
+        }
         Node tmpNode = new Node();
         tmpNode.item = sentinel.next.item;
-        sentinel.next.pre = sentinel;
-        sentinel.next.next = sentinel.next;
+        sentinel.next.next.pre = sentinel;
+        sentinel.next = sentinel.next.next;
         size--;
         return tmpNode.item;
     }
@@ -63,8 +64,10 @@ public class LinkedListDeque<T> {
         }
         Node tmpNode = new Node();
         tmpNode.item = sentinel.pre.item;
-        sentinel.next.pre = sentinel;
-        sentinel.next.next = sentinel.next;
+
+        sentinel.pre.pre.next=sentinel;
+        sentinel.pre=sentinel.pre.pre;
+
         size--;
         return tmpNode.item;
     }
