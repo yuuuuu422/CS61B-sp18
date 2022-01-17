@@ -81,11 +81,6 @@ public class ArrayDeque<T> {
         size++;
     }
 
-    /**
-     * add one item at the end of the deque.
-     *
-     * @param item item we want to add
-     */
     public void addLast(T item) {
         if (size == length - 1) {
             grow();
@@ -95,11 +90,6 @@ public class ArrayDeque<T> {
         size++;
     }
 
-    /**
-     * remove the first item.
-     *
-     * @return the removed first item
-     */
     public T removeFirst() {
         if (length >= 16 && length / size >= 4) {
             shrink();
@@ -113,11 +103,6 @@ public class ArrayDeque<T> {
         return ret;
     }
 
-    /**
-     * remove the last item.
-     *
-     * @return the removed last item
-     */
     public T removeLast() {
         if (length >= 16 && length / size >= 4) {
             shrink();
@@ -130,11 +115,6 @@ public class ArrayDeque<T> {
         return array[last];
     }
 
-    /**
-     * return the item indexed at index.
-     *
-     * @param index index
-     */
     public T get(int index) {
         if (index >= size) {
             return null;
@@ -146,9 +126,6 @@ public class ArrayDeque<T> {
         return array[ptr];
     }
 
-    /**
-     * print the entire deque from front to end.
-     */
     public void printDeque() {
         int ptr = front;
         while (ptr != last) {
