@@ -16,11 +16,11 @@ public class ArrayDeque<T> implements Deque<T>{
         front = 4;
         last = 4;
     }
-
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }
-
+    @Override
     public int size() {
         return size;
     }
@@ -39,7 +39,6 @@ public class ArrayDeque<T> implements Deque<T>{
         }
         return index + 1;
     }
-
     private void grow() {
         T[] newArray = (T[]) new Object[length * 2];
         int ptr1 = front;
