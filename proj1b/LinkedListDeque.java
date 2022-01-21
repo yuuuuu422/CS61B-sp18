@@ -45,6 +45,7 @@ public class LinkedListDeque<T> implements Deque<T> {
         sentinel.pre = newNode;
         size++;
     }
+
     @Override
     public T removeFirst() {
         if (size == 0) {
@@ -57,6 +58,7 @@ public class LinkedListDeque<T> implements Deque<T> {
         size--;
         return tmpNode.item;
     }
+
     @Override
     public T removeLast() {
         if (size == 0) {
@@ -71,6 +73,7 @@ public class LinkedListDeque<T> implements Deque<T> {
         size--;
         return tmpNode.item;
     }
+
     @Override
     public int size() {
         return size;
@@ -91,6 +94,7 @@ public class LinkedListDeque<T> implements Deque<T> {
         }
         return ptr.item;
     }
+
     @Override
     public void printDeque() {
         Node ptr = sentinel.next;
