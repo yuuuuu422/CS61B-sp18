@@ -44,13 +44,13 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
      */
     @Override
     public T dequeue() {
-        if (isEmpty()){
+        if (isEmpty()) {
             throw new RuntimeException("ArrayRingBuffer underflow");
         }
         T result = rb[first];
         fillCount--;
-        first=(first+1)%capacity;
-        return  result;
+        first = (first + 1) % capacity;
+        return result;
     }
 
     /**
@@ -62,4 +62,29 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
     }
 
     // TODO: When you get to part 5, implement the needed code to support iteration.
+
+    private class ArrayRingBufferIterator implements Iterator<T> {
+        private int pos;
+        private int curNum;
+        public ArrayRingBufferIterator() {
+            pos = first;
+            curNum = 0;
+        }
+
+        public boolean hasNext() {
+            return curNum < fillCount;
+        }
+
+        public T next() {
+            T retValue = rb[pos];
+            pos = (pos + 1) % capacity;
+            curNum++;
+            return retValue;
+        }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new ArrayRingBufferIterator();
+    }
 }
