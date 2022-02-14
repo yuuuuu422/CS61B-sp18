@@ -9,15 +9,15 @@ Deleting from a BST: Deletion with two Children (Hibbard)
 
 e.g.:
 
-![](.zimg/f4af443c.png)
+![](img/f4af443c.png)
 
 find two numbers adjacent to k(g < k and m > k ),we choose g.
 
-![](.zimg/610cc68a.png)
+![](img/610cc68a.png)
 
 g -> k and f -> g
 
-![](.zimg/365b8a55.png)
+![](img/365b8a55.png)
 
 ### B-Tree
 
@@ -32,11 +32,11 @@ The process of adding a node to a 2-3-4 tree :
 3. If this results in the parent node having 4 nodes, then pop up the middle left node again, rearranging the children accordingly.
 4. Repeat this process until the parent node can accommodate or you get to the root.
 
-![](.zimg/9753a266.png)
+![](img/9753a266.png)
 
 What Happens If The Root Is Too Full?
 
-![](.zimg/8834e9dc.png)
+![](img/8834e9dc.png)
 
 这个 [网站](https://www.cs.usfca.edu/~galles/visualization/BTree.html) 可以可视化演示BTree的插入和删除过程。
 
@@ -45,7 +45,7 @@ What Happens If The Root Is Too Full?
 
 rotateRight(P)： Let x be the left child of P. Make P the **new right child** of x.
 
-![](.zimg/3b821b35.png)
+![](img/3b821b35.png)
 #### Left-Leaning Red Black Binary Search Tree (LLRB)
 
 上面介绍的两种树：
@@ -57,27 +57,27 @@ rotateRight(P)： Let x be the left child of P. Make P the **new right child** o
 
 Question：How to build a BST that is structurally identical to a not unbalanced 2-3 tree?
 
-![](.zimg/4ce609c1.png)
+![](img/4ce609c1.png)
 
 >A BST with **left glue** links that represents a 2-3 tree is often called a 『Left Leaning Red Black Binary Search Tree』 or LLRB.
 >- LLRBs are normal BSTs!
 >- There is a 1-1 correspondence between an LLRB and an equivalent 2-3 tree.
 >- The red is just a convenient fiction. Red links don’t “do” anything special.
 
-![](.zimg/7e350dab.png)
+![](img/7e350dab.png)
 **LLRB properties:**
 - No node has two red links [otherwise it’d be analogous to a 4 node, which are disallowed in 2-3 trees].
 - Every path from root to a leaf has same number of black links [because 2-3 trees have the same number of links to every leaf]. LLRBs are therefore balanced.
 
-![](.zimg/5348a7fe.png)
+![](img/5348a7fe.png)
 
 #### Insertion rules
 
 1. 插入新结点的链接默认为红色
-![](.zimg/1c80b0e1.png)
+![](img/1c80b0e1.png)
 2. 如果出现右倾红链接，左旋转其结点
-![](.zimg/6a996ea8.png)
+![](img/6a996ea8.png)
 3. 如果出现连续两条红色左链接，右旋转其结点
-![](.zimg/f728403d.png)
+![](img/f728403d.png)
 4. 允许结点**暂时**含有左右两条红链接，之后翻转将子结点变黑，父结点变红(没有父结点，只变子结点即可)
-![](.zimg/77c2bcdf.png)
+![](img/77c2bcdf.png)
