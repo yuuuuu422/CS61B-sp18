@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import lab9.BSTMap;
 
+import java.util.Iterator;
+
 /**
  * Tests by Brendan Hu, Spring 2015, revised for 2018 by Josh Hug
  */
@@ -86,6 +88,19 @@ public class TestBSTMap {
         assertTrue(b.get("hi") != null);
     }
 
+    @Test
+    public void iteratorTest(){
+        BSTMap<Integer,Integer> b = new BSTMap<>();
+        for(int i=0;i<10;i++){
+            b.put(i,i);
+        }
+        Iterator it = b.iterator();
+        while (it.hasNext()){
+            int a=(int) it.next();
+            System.out.println(a);
+
+        }
+    }
     public static void main(String[] args) {
         jh61b.junit.TestRunner.runTests(TestBSTMap.class);
     }
