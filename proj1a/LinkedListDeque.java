@@ -9,7 +9,7 @@ public class LinkedListDeque<T> {
 
         public Node(T item, Node pre, Node next) {
             this.item = item;
-            this.pre = pre;
+            this.pre=pre;
             this.next = next;
         }
 
