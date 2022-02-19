@@ -1,9 +1,14 @@
+[toc]
+
+
+
 # CS61B-sp18
+
 Personal Solutions for CS 61B Data Structures, Spring 2018
 
-## some notes
 
-### Hibbard Deletion
+
+## Hibbard Deletion
 
 Deleting from a BST: Deletion with two Children (Hibbard)
 
@@ -19,7 +24,7 @@ g -> k and f -> g
 
 ![](img/365b8a55.png)
 
-### B-Tree
+## B-Tree
 
 > B-Tree: Balance Tree, Not Binary Tree
 > 
@@ -40,13 +45,13 @@ What Happens If The Root Is Too Full?
 
 这个 [网站](https://www.cs.usfca.edu/~galles/visualization/BTree.html) 可以可视化演示BTree的插入和删除过程。
 
-### Red Black Tree
-#### Tree Rotation
+## Red Black Tree
+### Tree Rotation
 
 rotateRight(P)： Let x be the left child of P. Make P the **new right child** of x.
 
 ![](img/3b821b35.png)
-#### Left-Leaning Red Black Binary Search Tree (LLRB)
+### Left-Leaning Red Black Binary Search Tree (LLRB)
 
 上面介绍的两种树：
 
@@ -71,7 +76,7 @@ Question：How to build a BST that is structurally identical to a not unbalanced
 
 ![](img/5348a7fe.png)
 
-#### Insertion rules
+### Insertion rules
 
 1. 插入新结点的链接默认为红色
 ![](img/1c80b0e1.png)
@@ -81,3 +86,20 @@ Question：How to build a BST that is structurally identical to a not unbalanced
 ![](img/f728403d.png)
 4. 允许结点**暂时**含有左右两条红链接，之后翻转将子结点变黑，父结点变红(没有父结点，只变子结点即可)
 ![](img/77c2bcdf.png)
+
+
+
+## Heaps and Priority Queues
+
+
+
+We will define our binary min-heap as being **complete** and obeying **min-heap** property:
+
+- Min-heap: Every node is less than or equal to both of its children
+
+- Complete: Missing items only at the bottom level (if any), all nodes are as far left as possible.
+
+  
+
+  ![img](https://joshhug.gitbooks.io/hug61b/content/assets/heap-13.2.1.png)
+
