@@ -1,10 +1,18 @@
-[toc]
+
 
 
 
 # CS61B-sp18
 
 Personal Solutions for CS 61B Data Structures, Spring 2018
+
+## TODO
+
+开学了，后面有空再补吧。
+
+- [ ] Lab 11 - 15
+- [ ] HW 4 5
+- [ ] Project 2、3（应该会考虑2021的Gitlet取代18的迷宫，GUI真不喜欢）
 
 ## Hibbard Deletion
 
