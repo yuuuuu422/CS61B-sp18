@@ -6,8 +6,6 @@
 
 Personal Solutions for CS 61B Data Structures, Spring 2018
 
-
-
 ## Hibbard Deletion
 
 Deleting from a BST: Deletion with two Children (Hibbard)
@@ -91,8 +89,6 @@ Question：How to build a BST that is structurally identical to a not unbalanced
 
 ## Heaps and Priority Queues
 
-
-
 We will define our binary min-heap as being **complete** and obeying **min-heap** property:
 
 - Min-heap: Every node is less than or equal to both of its children
@@ -102,4 +98,19 @@ We will define our binary min-heap as being **complete** and obeying **min-heap*
   
 
   ![img](https://joshhug.gitbooks.io/hug61b/content/assets/heap-13.2.1.png)
+
+所有对堆的操作必须基于以上两个特性：
+
+- `add`: 新结点先暂时放在最右下位置，再根据其值`swim up`到合适的位置。
+  - Swimming involves swapping nodes if child < parent
+- `getSmallest`: Return the root of the heap 
+- `removeSmallest`: 为了不破坏堆特性，先交换最右下结点和根结点，再删除最右下结点，根结点根据其值`sink down `到合适的位置。
+
+想要表示一棵树有很多方式，我们大多会使用引用来递归表示，但是**堆是一颗完全二叉树**，父母结点和子结点存在数学关系，我们完全可以用数组表示。
+
+![image-20220220164832268](img/image-20220220164832268.png)
+
+![image-20220220165236342](img/image-20220220165236342.png)
+
+
 
